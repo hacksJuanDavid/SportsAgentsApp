@@ -1,4 +1,4 @@
-namespace SportsAgentsAuhtService.Api;
+namespace SportsAgentsAuthService.Api;
 
 public class WeatherForecast
 {
