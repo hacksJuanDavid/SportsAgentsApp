@@ -1,4 +1,4 @@
-INSERT INTO `contactsportsagentsdb`.`contact`
+INSERT INTO `contactsportsagentsdb`.`contacts`
 VALUES (
         1,
         'John',
@@ -28,4 +28,4 @@ VALUES (
         'John',
         'John000@gmail.com',
         'esto es un mensaje'
-    ),
+    )
