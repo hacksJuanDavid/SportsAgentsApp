@@ -13,17 +13,17 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Dto\" />
-      <Folder Include="Extensions\" />
-      <Folder Include="Mappers\" />
-      <Folder Include="Middleware\" />
-      <Folder Include="Validators\" />
+        <Folder Include="Dto\"/>
+        <Folder Include="Extensions\"/>
+        <Folder Include="Mappers\"/>
+        <Folder Include="Middleware\"/>
+        <Folder Include="Validators\"/>
     </ItemGroup>
 
 </Project>

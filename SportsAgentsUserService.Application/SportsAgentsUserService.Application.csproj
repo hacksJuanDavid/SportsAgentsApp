@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces\" />
-      <Folder Include="Services\" />
+        <ProjectReference Include="..\SportsAgentsAuthService.Domain\SportsAgentsAuthService.Domain.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Domain\SportsAgentsUserService.Domain.csproj"/>
     </ItemGroup>
 
 </Project>

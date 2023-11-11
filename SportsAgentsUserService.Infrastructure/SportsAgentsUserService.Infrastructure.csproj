@@ -7,9 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
-      <Folder Include="Context\" />
-      <Folder Include="Repositories\" />
+        <ProjectReference Include="..\SportsAgentsAuthService.Application\SportsAgentsAuthService.Application.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Domain\SportsAgentsUserService.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13"/>
     </ItemGroup>
 
 </Project>

@@ -8,22 +8,29 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1"/>
+        <PackageReference Include="FluentValidation" Version="11.8.0"/>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0"/>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13"/>
+        <PackageReference Include="MySql.Data" Version="8.2.0" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.10" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Dto\" />
-      <Folder Include="Extensions\" />
-      <Folder Include="Mappers\" />
-      <Folder Include="Middleware\" />
-      <Folder Include="Validators\" />
+        <ProjectReference Include="..\SportsAgentsAuthService.Application\SportsAgentsAuthService.Application.csproj"/>
+        <ProjectReference Include="..\SportsAgentsAuthService.Infrastructure\SportsAgentsAuthService.Infrastructure.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Application\SportsAgentsUserService.Application.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Domain\SportsAgentsUserService.Domain.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Infrastructure\SportsAgentsUserService.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>

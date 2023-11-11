@@ -7,9 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
-      <Folder Include="Context\" />
-      <Folder Include="Repositories\" />
+        <Folder Include="Common\"/>
+        <Folder Include="Context\"/>
+        <Folder Include="Repositories\"/>
     </ItemGroup>
 
 </Project>
