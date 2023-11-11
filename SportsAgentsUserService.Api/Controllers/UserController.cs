@@ -35,7 +35,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Get(int id)
     {
         var user = await _userService.GetUserByIdAsync(id);
-        var userDto = _mapper.Map<User, UserDto>(user);
+        var userDto = _mapper.Map<User, UserDto>(user!);
         return Ok(userDto);
     }
 
@@ -65,7 +65,7 @@ public class UserController : ControllerBase
         var user = _mapper.Map<User>(userDto);
         user.Id = id;
         var userUpdated = await _userService.UpdateUserAsync(user);
-        var userUpdatedDto = _mapper.Map<User, UserDto>(userUpdated);
+        var userUpdatedDto = _mapper.Map<User, UserDto>(userUpdated!);
         return Ok(userUpdatedDto);
     }
 
