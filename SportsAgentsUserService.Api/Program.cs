@@ -31,6 +31,7 @@ builder.Services.AddServices();
 builder.Services.AddRepositories();
 builder.Services.AddValidators();
 builder.Services.AddMappings();
+builder.Services.AddAuthenticate(builder.Configuration);
 
 var app = builder.Build();
 
@@ -45,6 +46,13 @@ if (app.Environment.IsDevelopment())
 app.UseExceptionMiddleware();
 
 app.UseHttpsRedirection();
+
+app.UseCors(corsPolicyBuilder => corsPolicyBuilder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

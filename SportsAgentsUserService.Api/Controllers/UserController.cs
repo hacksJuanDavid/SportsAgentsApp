@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportsAgentsUserService.Api.Dto;
 using SportsAgentsUserService.Application.Interfaces;
@@ -6,6 +7,7 @@ using SportsAgentsUserService.Domain.Entities;
 
 namespace SportsAgentsUserService.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : ControllerBase

@@ -16,6 +16,8 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
     
+    // Methods
+    // Add User
     public async Task<User> AddUserAsync(User user)
     {
         // Validation User 
@@ -36,7 +38,8 @@ public class UserService : IUserService
         return userCreated;
         
     }
-
+    
+    // Get User By Id
     public async Task<User?> GetUserByIdAsync(int id)
     {
         // Validation User Exists
@@ -50,7 +53,8 @@ public class UserService : IUserService
         var user = await _userRepository.GetByIdAsync(id);
         return user;
     }
-
+    
+    // Get User By Email
     public async Task<User> GetUserByEmailAsync(string email)
     {
         // Validation User Exists
@@ -64,14 +68,16 @@ public class UserService : IUserService
         var user = await _userRepository.GetByEmailAsync(email);
         return user;
     }
-
+        
+    // Get All Users
     public async Task<IEnumerable<User>> GetAllUsersAsync()
     {
         // Get All Users
         var users = await _userRepository.GetAllAsync();
         return users;
     }
-
+    
+    // Update User
     public async Task<User?> UpdateUserAsync(User user)
     {
         // Validation User 
@@ -91,7 +97,8 @@ public class UserService : IUserService
         var userUpdated = await _userRepository.UpdateAsync(user);
         return userUpdated;
     }
-
+    
+    // Delete User
     public async Task<User?> DeleteUserAsync(int id)
     {
         // Validation User Exists
