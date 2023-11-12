@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SportsAgentsAuthService", "SportsAgentsAuthService", "{D6DBCD7F-D60B-44EC-8A31-9F164B22610E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SportsAgentsUserService", "SportsAgentsUserService", "{46EAE656-6AC4-4038-93B2-C0F2473C4E32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsUserService.Api", "SportsAgentsUserService.Api\SportsAgentsUserService.Api.csproj", "{879D58CA-F4EF-4208-843D-4362908FF3E7}"
@@ -22,14 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsContactService.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsContactService.Api", "SportsAgentsContactService.Api\SportsAgentsContactService.Api.csproj", "{33D08A20-4385-41C2-98DB-3F20E1E97C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsAuthService.Api", "SportsAgentsAuthService.Api\SportsAgentsAuthService.Api.csproj", "{EE3D181D-C224-4EE6-91B0-8C507190D1B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsAuthService.Domain", "SportsAgentsAuthService.Domain\SportsAgentsAuthService.Domain.csproj", "{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsAuthService.Application", "SportsAgentsAuthService.Application\SportsAgentsAuthService.Application.csproj", "{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsAgentsAuthService.Infrastructure", "SportsAgentsAuthService.Infrastructure\SportsAgentsAuthService.Infrastructure.csproj", "{531517B6-C8F5-4C4E-B81B-6516A11A5BEF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,10 +34,6 @@ Global
 		{7B5102CA-7358-4D50-9694-C771A5C48439} = {B8C0FFFD-C86F-4467-A0B0-36732DB7C3B5}
 		{4288123B-9F45-4B16-A1B4-F6C6D227BB2C} = {B8C0FFFD-C86F-4467-A0B0-36732DB7C3B5}
 		{33D08A20-4385-41C2-98DB-3F20E1E97C4A} = {B8C0FFFD-C86F-4467-A0B0-36732DB7C3B5}
-		{EE3D181D-C224-4EE6-91B0-8C507190D1B3} = {D6DBCD7F-D60B-44EC-8A31-9F164B22610E}
-		{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95} = {D6DBCD7F-D60B-44EC-8A31-9F164B22610E}
-		{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5} = {D6DBCD7F-D60B-44EC-8A31-9F164B22610E}
-		{531517B6-C8F5-4C4E-B81B-6516A11A5BEF} = {D6DBCD7F-D60B-44EC-8A31-9F164B22610E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{879D58CA-F4EF-4208-843D-4362908FF3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -82,21 +68,5 @@ Global
 		{33D08A20-4385-41C2-98DB-3F20E1E97C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D08A20-4385-41C2-98DB-3F20E1E97C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D08A20-4385-41C2-98DB-3F20E1E97C4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE3D181D-C224-4EE6-91B0-8C507190D1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE3D181D-C224-4EE6-91B0-8C507190D1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE3D181D-C224-4EE6-91B0-8C507190D1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE3D181D-C224-4EE6-91B0-8C507190D1B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{387107EB-BA7D-4D1D-BCB3-DBCE5347CE95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFF4A0ED-F35A-420C-93B1-D284BFFD6FE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{531517B6-C8F5-4C4E-B81B-6516A11A5BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{531517B6-C8F5-4C4E-B81B-6516A11A5BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{531517B6-C8F5-4C4E-B81B-6516A11A5BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{531517B6-C8F5-4C4E-B81B-6516A11A5BEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -28,8 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SportsAgentsAuthService.Application\SportsAgentsAuthService.Application.csproj"/>
-        <ProjectReference Include="..\SportsAgentsAuthService.Infrastructure\SportsAgentsAuthService.Infrastructure.csproj"/>
         <ProjectReference Include="..\SportsAgentsUserService.Application\SportsAgentsUserService.Application.csproj"/>
         <ProjectReference Include="..\SportsAgentsUserService.Domain\SportsAgentsUserService.Domain.csproj"/>
         <ProjectReference Include="..\SportsAgentsUserService.Infrastructure\SportsAgentsUserService.Infrastructure.csproj"/>
