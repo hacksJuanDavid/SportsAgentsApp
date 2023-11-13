@@ -10,13 +10,13 @@ public class Repository<T> : IRepository<T> where T : EntityBase
 {
     // Vars
     private readonly AppDbContext _appDbContext;
-    
+
     // Constructor
     protected Repository(AppDbContext appDbContext)
     {
         _appDbContext = appDbContext;
     }
-    
+
     // Methods
     // Add Entity
     public async Task<T> AddAsync(T entity)
@@ -25,18 +25,18 @@ public class Repository<T> : IRepository<T> where T : EntityBase
         await _appDbContext.SaveChangesAsync();
         return entity;
     }
-    
+
     // Get Entity
     public async Task<T?> GetByIdAsync(int id)
     {
         return await _appDbContext.Set<T>().FindAsync(id);
     }
-    
+
     // Get Entity by Email
     public async Task<T> GetByEmailAsync(string email)
-    {   
+    {
         var entity = await _appDbContext.Set<T>().FirstOrDefaultAsync(e => EF.Property<string>(e, "Email") == email);
-    
+
         if (entity == null)
         {
             throw new NotFoundException($"Item with Email={email} Not Found");
@@ -44,7 +44,7 @@ public class Repository<T> : IRepository<T> where T : EntityBase
 
         return entity;
     }
-    
+
     // Get All Entities
     public async Task<IEnumerable<T>> GetAllAsync()
     {
@@ -56,7 +56,7 @@ public class Repository<T> : IRepository<T> where T : EntityBase
     {
         return await _appDbContext.Set<T>().Where(predicate).ToListAsync();
     }
-    
+
     // Update Entity
     public async Task<T?> UpdateAsync(T? entity)
     {
@@ -73,7 +73,7 @@ public class Repository<T> : IRepository<T> where T : EntityBase
 
         return entity!;
     }
-    
+
     // Delete Entity
     public async Task<T?> DeleteAsync(T? entity)
     {
