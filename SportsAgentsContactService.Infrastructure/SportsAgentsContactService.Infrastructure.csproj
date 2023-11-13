@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SportsAgentsContactService.Domain\SportsAgentsContactService.Domain.csproj" />
-      <ProjectReference Include="..\SportsAgentsUserService.Infrastructure\SportsAgentsUserService.Infrastructure.csproj" />
+        <ProjectReference Include="..\SportsAgentsContactService.Domain\SportsAgentsContactService.Domain.csproj"/>
+        <ProjectReference Include="..\SportsAgentsUserService.Infrastructure\SportsAgentsUserService.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>

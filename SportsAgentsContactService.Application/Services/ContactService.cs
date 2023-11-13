@@ -16,6 +16,8 @@ public class ContactService : IContactService
         _contactRepository = contactRepository;
     }
 
+    // Methods
+    // Add contact
     public async Task<Contact> AddContactAsync(Contact contact)
     {
         // Validation contact 
@@ -36,6 +38,7 @@ public class ContactService : IContactService
         return contactCreated;
     }
 
+    // Get contact by Id
     public async Task<Contact?> GetContactByIdAsync(int id)
     {
         // Validation contact Exists with Id
@@ -57,6 +60,7 @@ public class ContactService : IContactService
         return contacts;
     }
 
+    // Update contact
     public async Task<Contact?> UpdateContactAsync(Contact? contact)
     {
         // Validation contact 
@@ -77,6 +81,7 @@ public class ContactService : IContactService
         return contactUpdated;
     }
 
+    // Delete contact
     public async Task<Contact?> DeleteContactAsync(int id)
     {
         // Validation contact Exists with Id

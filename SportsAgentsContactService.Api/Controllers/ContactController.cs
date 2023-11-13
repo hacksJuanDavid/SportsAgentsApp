@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportsAgentsContactService.Api.Dto;
 using SportsAgentsContactService.Application.Interfaces;
@@ -6,6 +7,7 @@ using SportsAgentsContactService.Domain.Entities;
 
 namespace SportsAgentsContactService.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ContactController : ControllerBase
@@ -47,7 +49,7 @@ public class ContactController : ControllerBase
         await _contactService.AddContactAsync(contact);
         return Ok();
     }
-    
+
     // PUT: api/contact/3
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, [FromBody] ContactDto contactDto)
@@ -58,7 +60,7 @@ public class ContactController : ControllerBase
         var contactUpdatedDto = _mapper.Map<Contact, ContactDto>(contactUpdated!);
         return Ok(contactUpdatedDto);
     }
-    
+
     // DELETE: api/contact/3
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
