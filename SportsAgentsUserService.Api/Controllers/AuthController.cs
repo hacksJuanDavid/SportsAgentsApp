@@ -4,6 +4,8 @@ using SportsAgentsUserService.Application.Interfaces;
 
 namespace SportsAgentsUserService.Api.Controllers;
 
+[ApiController]
+[Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
     // Vars
@@ -19,8 +21,17 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] AuthDto authDto)
     {
-        var token = await _authService.LoginAsync(authDto.Email, authDto.Password);
-        return Ok(token);
+        try
+        {
+            var token = await _authService.LoginAsync(authDto.Email, authDto.Password);
+            return Ok(new { Token = token });
+        }
+        catch (Exception ex)
+        {
+            // Handle authentication failure
+            return Unauthorized(new { ex.Message });
+        }
+
     }
 
     // POST: /api/auth/register

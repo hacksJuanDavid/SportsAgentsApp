@@ -25,7 +25,7 @@ public class UserController : ControllerBase
 
     // GET: api/user
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> GetAll()
     {
         var users = await _userService.GetAllUsersAsync();
         var usersDto = _mapper.Map<IEnumerable<User>, IEnumerable<UserDto>>(users);

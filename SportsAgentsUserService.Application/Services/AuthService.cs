@@ -20,7 +20,7 @@ public class AuthService : IAuthService
     public AuthService(IUserRepository userRepository, IConfiguration config)
     {
         _userRepository = userRepository;
-        _secretKey = config.GetSection("AppSettings").GetSection("SecretKey").Value;
+        _secretKey = config.GetSection("AppSettings").GetSection("SecretKey").Value!;
     }
 
     public async Task<string> LoginAsync(string email, string password)
