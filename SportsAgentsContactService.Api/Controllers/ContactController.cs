@@ -7,7 +7,7 @@ using SportsAgentsContactService.Domain.Entities;
 
 namespace SportsAgentsContactService.Api.Controllers;
 
-[Authorize]
+
 [ApiController]
 [Route("api/[controller]")]
 public class ContactController : ControllerBase
@@ -25,6 +25,7 @@ public class ContactController : ControllerBase
 
     // GET: api/contact
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetAll()
     {
         var contacts = await _contactService.GetAllContactsAsync();
@@ -34,6 +35,7 @@ public class ContactController : ControllerBase
 
     // GET: api/contact/3
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetById(int id)
     {
         var contact = await _contactService.GetContactByIdAsync(id);
@@ -52,6 +54,7 @@ public class ContactController : ControllerBase
 
     // PUT: api/contact/3
     [HttpPut("{id}")]
+    [Authorize]
     public async Task<IActionResult> Put(int id, [FromBody] ContactDto contactDto)
     {
         var contact = _mapper.Map<ContactDto, Contact>(contactDto);
@@ -63,6 +66,7 @@ public class ContactController : ControllerBase
 
     // DELETE: api/contact/3
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
         await _contactService.DeleteContactAsync(id);

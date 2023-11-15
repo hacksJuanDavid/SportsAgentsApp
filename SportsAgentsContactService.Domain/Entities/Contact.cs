@@ -16,6 +16,6 @@ public class Contact : EntityBase
     public string Email { get; set; } = null!;
 
     [Required(ErrorMessage = "The message is required")]
-    [StringLength(500, ErrorMessage = "The message must be less than 500 characters")]
+    [StringLength(1000, ErrorMessage = "The message must be less than 1000 characters")]
     public string Message { get; set; } = null!;
 }
